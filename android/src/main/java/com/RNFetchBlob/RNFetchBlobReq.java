@@ -54,7 +54,7 @@ import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import 	javax.net.ssl.SSLSocketFactory;
-
+import com.RNFetchBlob.Utils.Tls12SocketFactory;
 import okhttp3.Call;
 import okhttp3.ConnectionPool;
 import okhttp3.ConnectionSpec;
@@ -67,9 +67,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import okhttp3.TlsVersion;
-import com.RNFetchBlob.Utils.Tls12SocketFactory;
-
-
 public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
 
     enum RequestType  {
