@@ -812,7 +812,7 @@ public class RNFetchBlobReq extends BroadcastReceiver implements Runnable {
     public static OkHttpClient.Builder enableTls12OnPreLollipop(OkHttpClient.Builder client) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN && Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
             try {
-                                // Code from https://github.com/square/okhttp/issues/2372#issuecomment-244807676
+                // Code from https://github.com/square/okhttp/issues/2372#issuecomment-244807676
                 SSLContext sc = SSLContext.getInstance("TLSv1.2");
                 sc.init(null, null, null);
                 client.sslSocketFactory(new Tls12SocketFactory(sc.getSocketFactory()));
